@@ -7,24 +7,79 @@ $du_light_grey: #909090;
 
 /**** GENERAL ****/
 .image img {width: 100%;}
+.upper {text-transform: uppercase;}
+
+.black-text {color: $du_black !important;}
+.yellow-text {color: $du_yellow !important;}
+.blue-text {color: $du_blue !important;}
+
+.yellow {background-color: $du_yellow !important;}
+.blue {background-color: $du_blue !important;}
 
 /**** HEADER ****/
 header {
 	nav {
-		ul {
-			a {color: $du_black;}
-		}
 		a {color: $du_black;}
 	}
 }
 .brand-logo img, .footer-logo img {max-width: 200px; padding: 14px 0;}
 
 /**** PAGE ****/
+.section-title {font-size: 1.5rem;}
+.items-grid {
+	.item {
+		padding: 0 3px;
+		margin: 0;
+		margin-bottom: 6px;
+		.wrapper {
+			text-align: center;
+			padding: 20px;
+			background: #ccc;
+			.title {text-transform: uppercase; color: $du_black;}
+			.value {font-size: 2.5rem;}
+		}
+	}
+}
+.grid-5 {
+	.item {
+		width: 20%; float: left;
+		.wrapper {padding: 40px 20px;}
+	}
+}
+
+.greed-green {
+	.item .wrapper {background: #fff54e;}
+	.item:nth-child(1) .wrapper {background: #5da30f;}
+	.item:nth-child(2) .wrapper {background: #70be1a;}
+	.item:nth-child(3) .wrapper {background: #7fcd2b;}
+	.item:nth-child(4) .wrapper {background: #8ce42e;}
+	.item:nth-child(5) .wrapper {background: #8ce42e;}
+	.item:nth-child(6) .wrapper {background: #a4e95a;}
+	.item:nth-child(7) .wrapper {background: #c2e95a;}
+	.item:nth-child(8) .wrapper {background: #cce959;}
+	.item:nth-child(9) .wrapper {background: #e7e958;}
+	.item:nth-child(10) .wrapper {background: #fff54e;}
+}
+
+.parallax-container {height: 300px;}
+.section.wrapper {padding: 0; overflow: hidden; height: 100%; background-color: rgba(255,255,255,0.5);}
 
 /**** FOOTER ****/
 footer.page-footer {
+	padding-top: 0;
+	margin-top: 0;
 	.footer-copyright {background-color: $du_black; height: 63px; line-height: 63px;}
 	.footer-nav {box-shadow: none !important; background: transparent;}
 	a {color: $du_light_grey;}
 
+}
+
+/**** RESPONSE ****/
+@media screen and (max-width: 480px){
+	.grid-5 {
+		.item {
+			width: 50%; float: left;
+			.wrapper {padding: 20px 10px;}
+		}
+	}
 }
