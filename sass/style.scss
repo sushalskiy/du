@@ -1,0 +1,30 @@
+$du_blue: #43d1ff;
+$du_yellow: #ffe04a;
+$du_black: #332d2a;
+
+$du_grey: #767676;
+$du_light_grey: #909090;
+
+/**** GENERAL ****/
+.image img {width: 100%;}
+
+/**** HEADER ****/
+header {
+	nav {
+		ul {
+			a {color: $du_black;}
+		}
+		a {color: $du_black;}
+	}
+}
+.brand-logo img, .footer-logo img {max-width: 200px; padding: 14px 0;}
+
+/**** PAGE ****/
+
+/**** FOOTER ****/
+footer.page-footer {
+	.footer-copyright {background-color: $du_black; height: 63px; line-height: 63px;}
+	.footer-nav {box-shadow: none !important; background: transparent;}
+	a {color: $du_light_grey;}
+
+}

@@ -1,0 +1,39 @@
+/**** GENERAL ****/
+/* line 9, ../sass/style.scss */
+.image img {
+  width: 100%;
+}
+
+/**** HEADER ****/
+/* line 15, ../sass/style.scss */
+header nav ul a {
+  color: #332d2a;
+}
+/* line 17, ../sass/style.scss */
+header nav a {
+  color: #332d2a;
+}
+
+/* line 20, ../sass/style.scss */
+.brand-logo img, .footer-logo img {
+  max-width: 200px;
+  padding: 14px 0;
+}
+
+/**** PAGE ****/
+/**** FOOTER ****/
+/* line 26, ../sass/style.scss */
+footer.page-footer .footer-copyright {
+  background-color: #332d2a;
+  height: 63px;
+  line-height: 63px;
+}
+/* line 27, ../sass/style.scss */
+footer.page-footer .footer-nav {
+  box-shadow: none !important;
+  background: transparent;
+}
+/* line 28, ../sass/style.scss */
+footer.page-footer a {
+  color: #909090;
+}
