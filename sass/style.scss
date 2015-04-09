@@ -35,8 +35,16 @@ header {
 			text-align: center;
 			padding: 20px;
 			background: #ccc;
+			-moz-transition: background 0.5s ease;
+			-o-transition: background 0.5s ease;
+			-webkit-transition: background 0.5s ease;
+			transition: background 0.5s ease;
 			.title {text-transform: uppercase; color: $du_black;}
-			.value {font-size: 2.5rem;}
+			.value {font-size: 2.5rem; color: $du_black;}
+			&:hover {
+				background: $du_black !important;
+				.title, .value {color: #fff;}
+			}
 		}
 	}
 }
@@ -75,6 +83,22 @@ footer.page-footer {
 }
 
 /**** RESPONSE ****/
+@media screen and (max-width: 768px){
+	.grid-5 {
+		.item {
+			width: 25%; float: left;
+			.wrapper {padding: 20px 10px;}
+		}
+	}
+}
+@media screen and (max-width: 640px){
+	.grid-5 {
+		.item {
+			width: 33.33%; float: left;
+			.wrapper {padding: 30px 10px;}
+		}
+	}
+}
 @media screen and (max-width: 480px){
 	.grid-5 {
 		.item {
@@ -82,4 +106,6 @@ footer.page-footer {
 			.wrapper {padding: 20px 10px;}
 		}
 	}
+	.brand-logo {right: 50%;}
+	.brand-logo img, .footer-logo img {max-width: 150px;}
 }
