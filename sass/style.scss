@@ -1,3 +1,8 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+
+
 $du_blue: #43d1ff;
 $du_yellow: #ffe04a;
 $du_black: #332d2a;
@@ -23,16 +28,12 @@ $du_light_grey_bg: #e4e4e4;
 .text-shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
 .bottom-shadow {
-	-webkit-box-shadow: 0 5px 10px 0px rgba(128, 128, 128, 0.5);
-	-moz-box-shadow: 0 5px 10px 0px rgba(128, 128, 128, 0.5);
-	box-shadow: 0 5px 10px 0px rgba(128, 128, 128, 0.5);
+	@include box-shadow(rgba(128, 128, 128, 0.5) 0 5px 10px 0px);
 }
 
 .transparent {
 	background-color: transparent !important; 
-	box-shadow: none !important;
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
+	@include box-shadow(none !important);
 }
 .share-section {
 	position: relative;
@@ -53,24 +54,14 @@ $du_light_grey_bg: #e4e4e4;
 				background: #fff;
 				font-size: 22px;
 				color: $du_black;
-				-webkit-box-shadow:  0 3px 5px 0px rgba(128, 128, 128, 0.5);
-				-moz-box-shadow:  0 3px 5px 0px rgba(128, 128, 128, 0.5);
-				box-shadow: 0 3px 5px 0px rgba(128, 128, 128, 0.5);
-				-webkit-transition-duration: 0.3s;
-			    -moz-transition-duration: 0.3s;
-			    -ms-transition-duration: 0.3s;
-			    -o-transition-duration: 0.3s;
-			    transition-duration: 0.3s;
+				@include box-shadow(rgba(128, 128, 128, 0.5) 0 3px 5px 0px);
+				@include transition-duration(0.25s);
 			}
 			&:hover{
 				a {
 					background: orange;
 					color: #fff;
-					-webkit-transform: scale(1.5);
-				    -moz-transform: scale(1.5);
-				    -ms-transform: scale(1.5);
-				    -o-transform: scale(1.5);
-				    transform: scale(1.5);
+					@include transform(scale(1.5));
 				}
 			}
 		}
@@ -83,10 +74,7 @@ $du_light_grey_bg: #e4e4e4;
 header {
 	nav {
 		a {color: $du_black;}
-		-moz-transition: background-color 0.5s ease;
-		-o-transition: background-color 0.5s ease;
-		-webkit-transition: background-color 0.5s ease;
-		transition: background-color 0.5s ease;
+		@include transition(background 0.5s ease);
 	}
 	nav.transparent {
 		/*a {color: white;}*/
@@ -106,10 +94,7 @@ header {
 			text-align: center;
 			padding: 20px;
 			background: #ccc;
-			-moz-transition: background 0.5s ease;
-			-o-transition: background 0.5s ease;
-			-webkit-transition: background 0.5s ease;
-			transition: background 0.5s ease;
+			@include transition(background 0.5s ease);
 			.title {text-transform: uppercase; color: $du_black;}
 			.value {font-size: 2.5rem; color: $du_black;}
 			&:hover {
