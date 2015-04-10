@@ -10,8 +10,8 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <header>
-    <nav class="white" role="navigation">
+  <header class="fixed">
+    <nav id="navigation-home" class="white transparent" role="navigation">
       <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">
           <img src="images/logo.png" alt="Logo">
@@ -35,31 +35,23 @@
   </header>
 
   <main>
-    <div class="section no-pad-bot" id="index-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col m6">
-            <h1 class="header blue-text">Starter Template</h1>
-            <div class="row">
-              <div class="col s12">
-                <h5 class="header light">A modern responsive front-end framework based on Material Design</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <a href="#" class="btn-large waves-effect waves-light blue">Get Started</a>
-              </div>
-            </div>
+
+    <div id="index-banner" class="parallax-container z-depth-1">
+      <div class="section">
+        <div class="container">
+          <br><br><br>
+          <h1 class="header center white-text text-shadow">ВВП на ладони</h1>
+          <div class="row center">
+            <h5 class="header col s12 light white-text text-shadow">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
           </div>
-          <div class="col m6">
-            <div class="image">
-              <img src="images/circle-chart.png" alt="GRAPH">
-            </div>
+          <div class="row center">
+            <a href="#" class="btn-large waves-effect waves-light orange">Learn more</a>
           </div>
+          <br><br>
         </div>
       </div>
+      <div class="parallax"><img src="images/background.jpg" alt=""></div>
     </div>
-
 
     <div class="section">
       <div class="container">
@@ -151,20 +143,19 @@
       </div>
     </div>
 
-    <div id="cta-banner" class="parallax-container">
+    <div id="cta-banner" class="cta-container">
       <div class="section wrapper">
         <div class="container">
-          <h2 class="header center">Parallax Template</h2>
           <div class="row center">
-            <h5 class="header col s12">A modern responsive front-end framework based on Material Design</h5>
+            <h5 class="header col s12 white-text light">Please, tell us what Data you need to know</h5>
           </div>
           <div class="row center">
-            <a href="#" id="cta-button" class="btn-large waves-effect waves-light blue">Get Started</a>
+            <a href="#" id="cta-button" class="btn-large waves-effect waves-light blue">Leave feedback</a>
           </div>
         </div>
       </div>
-      <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 2"></div>
     </div>
+
   </main>
 
   <footer class="page-footer">
@@ -195,6 +186,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/bin/materialize.js"></script>
+  <script src="js/scrollFire.js"></script>
   <script src="js/init.js"></script>
 
   </body>
