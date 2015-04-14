@@ -1,6 +1,7 @@
 @import "compass/css3/transition";
 @import "compass/css3/transform";
 @import "compass/css3/box-shadow";
+@import "animate.scss";
 
 
 $du_blue: #43d1ff;
@@ -12,6 +13,7 @@ $du_light_grey: #909090;
 $du_light_grey_bg: #e4e4e4;
 
 /**** GENERAL ****/
+.clearboth {clear: both; float: none; width: 100%;}
 .image img {width: 100%;}
 .upper {text-transform: uppercase;}
 
@@ -27,9 +29,9 @@ $du_light_grey_bg: #e4e4e4;
 .light-grey-bg {background-color: $du_light_grey_bg !important;}
 .text-shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
-.bottom-shadow {
-	@include box-shadow(rgba(128, 128, 128, 0.5) 0 5px 10px 0px);
-}
+.link {display: inline-block; height: 36px; line-height: 36px; padding: 0 2rem; text-align: center; text-transform: uppercase;}
+
+.bottom-shadow {@include box-shadow(rgba(128, 128, 128, 0.5) 0 5px 10px 0px);}
 
 .transparent {
 	background-color: transparent !important; 
@@ -152,6 +154,24 @@ footer.page-footer {
 	.footer-nav {box-shadow: none !important; background: transparent;}
 	a {color: $du_light_grey;}
 
+}
+
+
+/******* LOGIN PAGE *******/
+body.fixed {position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}
+#login-banner {
+	position: fixed; z-index: 0; top: 0; left: 0; right: 0; 
+	height: 350px; 
+	overflow: hidden; 
+	background-image: url('../images/background.jpg');
+	background-repeat: no-repeat; background-position: center; background-size: cover;
+}
+.login-section {position: relative; z-index: 1; margin-top: 50px;}
+.logo-text {font-size: 1.5em; padding: 1em 0;}
+.login-wrapper {
+  background-color: white;
+  padding: 34px;
+  .link {font-size: 12px;}
 }
 
 /**** RESPONSE ****/
