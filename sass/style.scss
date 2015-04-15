@@ -98,14 +98,19 @@ header {
 			position: absolute; top: 0; left: 0;
 			text-align: center;	height: 100%; width: 100%; overflow: hidden;
 			background: #ccc;
-			/* align to center */
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			
 			@include transition(background 0.5s ease);
-			.content {padding: 17px;}
+			.content {
+				padding: 17px;
+				display: inline-block;
+				vertical-align: middle;
+			}
 
 			.title {text-transform: uppercase; color: $du_black;}
 			.value {font-size: 2.5rem; color: $du_black;}

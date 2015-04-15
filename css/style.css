@@ -606,98 +606,102 @@ header nav.transparent {
   width: 100%;
   overflow: hidden;
   background: #ccc;
-  /* align to center */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
   -webkit-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 108, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
+.items-grid .item .wrapper:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 109, ../sass/style.scss */
 .items-grid .item .wrapper .content {
   padding: 17px;
+  display: inline-block;
+  vertical-align: middle;
 }
-/* line 110, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .items-grid .item .wrapper .title {
   text-transform: uppercase;
   color: #332d2a;
 }
-/* line 111, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .items-grid .item .wrapper .value {
   font-size: 2.5rem;
   color: #332d2a;
 }
-/* line 112, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .items-grid .item .wrapper:hover {
   background: #332d2a !important;
 }
-/* line 114, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .items-grid .item .wrapper:hover .title, .items-grid .item .wrapper:hover .value {
   color: #fff;
 }
 
-/* line 120, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .grid-5 .item {
   width: 20%;
   float: left;
 }
 
-/* line 127, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .greed-green .item .wrapper {
   background: #fff54e;
 }
-/* line 128, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .greed-green .item:nth-child(1) .wrapper {
   background: #5da30f;
 }
-/* line 129, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .greed-green .item:nth-child(2) .wrapper {
   background: #70be1a;
 }
-/* line 130, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 .greed-green .item:nth-child(3) .wrapper {
   background: #7fcd2b;
 }
-/* line 131, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .greed-green .item:nth-child(4) .wrapper {
   background: #8ce42e;
 }
-/* line 132, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .greed-green .item:nth-child(5) .wrapper {
   background: #8ce42e;
 }
-/* line 133, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .greed-green .item:nth-child(6) .wrapper {
   background: #a4e95a;
 }
-/* line 134, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .greed-green .item:nth-child(7) .wrapper {
   background: #c2e95a;
 }
-/* line 135, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .greed-green .item:nth-child(8) .wrapper {
   background: #cce959;
 }
-/* line 136, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .greed-green .item:nth-child(9) .wrapper {
   background: #e7e958;
 }
-/* line 137, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .greed-green .item:nth-child(10) .wrapper {
   background: #fff54e;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .cta-container {
   background-image: url("../images/background1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-/* line 145, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .cta-container .wrapper {
   padding: 30px 0;
   overflow: hidden;
@@ -705,22 +709,22 @@ header nav.transparent {
   background-color: rgba(71, 209, 255, 0.55);
 }
 
-/* line 148, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .section .heading {
   padding: 30px 0;
 }
-/* line 150, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .section .heading .header {
   margin: 0;
   line-height: 36px;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .card .card-title {
   font-size: 18px;
   line-height: 1;
 }
-/* line 156, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .card.no-content .card-action {
   border-top: none;
   padding-top: 10px;
@@ -728,29 +732,29 @@ header nav.transparent {
 }
 
 /**** FOOTER ****/
-/* line 160, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 footer.page-footer {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 163, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 footer.page-footer .footer-copyright {
   background-color: #332d2a;
   height: 63px;
   line-height: 63px;
 }
-/* line 164, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 footer.page-footer .footer-nav {
   box-shadow: none !important;
   background: transparent;
 }
-/* line 165, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 footer.page-footer a {
   color: #909090;
 }
 
 /******* LOGIN PAGE *******/
-/* line 171, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 body.fixed {
   position: absolute;
   top: 0;
@@ -760,7 +764,7 @@ body.fixed {
   overflow: hidden;
 }
 
-/* line 172, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 #login-banner {
   position: fixed;
   z-index: 0;
@@ -775,57 +779,57 @@ body.fixed {
   background-size: cover;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 .login-section {
   position: relative;
   z-index: 1;
   margin-top: 50px;
 }
 
-/* line 180, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .logo-text {
   font-size: 1.5em;
   padding: 1em 0;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .login-wrapper {
   background-color: white;
   padding: 34px;
 }
-/* line 184, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .login-wrapper .link {
   font-size: 12px;
 }
 
 /**** RESPONSE ****/
 @media screen and (max-width: 768px) {
-  /* line 190, ../sass/style.scss */
+  /* line 195, ../sass/style.scss */
   .grid-5 .item {
     width: 25%;
     float: left;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 195, ../sass/style.scss */
+  /* line 200, ../sass/style.scss */
   .grid-5 .item {
     width: 33.33%;
     float: left;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 200, ../sass/style.scss */
+  /* line 205, ../sass/style.scss */
   .grid-5 .item {
     width: 50%;
     float: left;
   }
 
-  /* line 202, ../sass/style.scss */
+  /* line 207, ../sass/style.scss */
   .brand-logo {
     right: 50%;
   }
 
-  /* line 203, ../sass/style.scss */
+  /* line 208, ../sass/style.scss */
   .brand-logo img, .footer-logo img {
     max-width: 150px;
   }
