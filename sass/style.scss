@@ -1,3 +1,6 @@
+@import "font-awesome-compass";
+@import "font-awesome";
+
 @import "compass/css3/transition";
 @import "compass/css3/transform";
 @import "compass/css3/box-shadow";
@@ -10,7 +13,14 @@ $du_black: #332d2a;
 
 $du_grey: #767676;
 $du_light_grey: #909090;
-$du_light_grey_bg: #e4e4e4;
+$du_light: #e4e4e4;
+
+
+$color_facebook : #004b99;
+$color_vk       : #0069b3;
+$color_google   : #df4104;
+$color_twitter  : #60a9de;
+$color_youtube  : #b6252c;
 
 /**** GENERAL ****/
 .clearboth {clear: both; float: none; width: 100%;}
@@ -26,7 +36,7 @@ $du_light_grey_bg: #e4e4e4;
 .yellow {background-color: $du_yellow !important;}
 .blue {background-color: $du_blue !important;}
 .light-grey {background-color: $du_light_grey !important;}
-.light-grey-bg {background-color: $du_light_grey_bg !important;}
+.light-grey-bg {background-color: $du_light !important;}
 .text-shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
 .link {display: inline-block; height: 36px; line-height: 36px; padding: 0 2rem; text-align: center; text-transform: uppercase;}
@@ -37,40 +47,65 @@ $du_light_grey_bg: #e4e4e4;
 	background-color: transparent !important; 
 	@include box-shadow(none !important);
 }
-.share-section {
-	position: relative;
-	.header {display: inline-block; margin: 0; font-size: 36px; line-height: 64px; vertical-align: middle;}
-	.sharing {
+
+.sharing {
+	display: inline-block;
+	margin: 0; padding: 0;
+	li {
 		display: inline-block;
-		margin: 0 0 0 34px; padding: 0;
-		li {
-			display: inline-block;
-			width: 54px;
-			height: 54px;
-			line-height: 64px;
-			vertical-align: middle;
+		width: 54px;
+		height: 54px;
+		line-height: 54px;
+		vertical-align: middle;
+		a {
+			color: $du_black;
+			display: inline-block; text-align: center;
+			height: 36px; width: 36px; line-height: 36px;
+			font-size: 18px;
+			@include transition-duration(0.25s);
+		}
+		a.facebook {color: $color_facebook;}
+		a.vk       {color: $color_vk;}
+		a.google   {color: $color_google;}
+		a.twitter  {color: $color_twitter;}
+		a.youtube  {color: $color_youtube;}
+		&:hover{
 			a {
-				display: inline-block; text-align: center;
-				height: 36px; width: 36px; line-height: 36px;
-				border-radius: 50%;
-				background: #fff;
-				font-size: 22px;
-				color: $du_black;
-				@include box-shadow(rgba(128, 128, 128, 0.5) 0 3px 5px 0px);
-				@include transition-duration(0.25s);
-			}
-			&:hover{
-				a {
-					background: orange;
-					color: #fff;
-					@include transform(scale(1.5));
-				}
+				@include transform(scale(1.5));
 			}
 		}
 	}
 }
 
+.share-section {
+	position: relative;
+	.header {display: inline-block; margin: 0; font-size: 36px; line-height: 64px; vertical-align: middle;}
+	.sharing {
+		margin: 0 0 0 34px;
+		li {
+			a{
+				background: #fff;
+				border-radius: 50%;
+				@include box-shadow(rgba(128, 128, 128, 0.5) 0 3px 5px 0px);
+			}
+			&:hover {
+				a {
+					background: orange;
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+}
+
 .fixed {position: fixed; top: 0; left: 0; right: 0; z-index: 9000;}
+.drop {display: none;}
+.drop-button {
+	cursor: pointer;
+	i {font-size: 1.25em; vertical-align: bottom; display: inline-block;}
+}
+.row.no-margin {margin-bottom: 0;}
 
 /**** HEADER ****/
 header {
@@ -162,16 +197,68 @@ header {
 		.card-action {border-top: none; padding-top: 10px; padding-bottom: 10px;}
 	}
 }
-/**** FOOTER ****/
-footer.page-footer {
-	padding-top: 0;
-	margin-top: 0;
-	.footer-copyright {background-color: $du_black; height: 63px; line-height: 63px;}
-	.footer-nav {box-shadow: none !important; background: transparent;}
-	a {color: $du_light_grey;}
-
+.page-header {
+	padding-top: 40px;
+	.page-title {font-size: 2em; margin: 0; padding: 0; line-height: 40px;}
+	.action {
+		float: right; text-align: right; line-height: 40px;
+	}
+}
+.card-image {
+	img {opacity: 1; @include transition(opacity 0.25s ease);}
+	img:hover {opacity: 0.8;}
 }
 
+.pagination li {
+	&, i {line-height: 30px;}
+	&.active {background-color: $du_yellow;}
+}
+
+
+
+/*** REPORT PAGE ***/
+.report {
+	padding: 30px 0;
+	.head {
+		.head-wrapper {
+			position: relative;
+			.share {
+				position: absolute; left: 0; bottom: 0; z-index: 0;
+				height: 80px; line-height: 80px; width: 100%;
+				border-top: 1px solid $du_light;
+				a {
+					color: $du_light_grey;
+					&.facebook:hover {color: $color_facebook;}
+					&.vk:hover       {color: $color_vk;}
+					&.google:hover   {color: $color_google;}
+					&.twitter:hover  {color: $color_twitter;}
+					&.youtube:hover  {color: $color_youtube;}
+				}
+			}
+			.cart {
+				display: block;
+				position: absolute; right: 40px; bottom: 40px; z-index: 2;
+				border-radius: 50%;
+				width: 80px; height: 80px; line-height: 80px; text-align: center;
+				color: #fff; font-size: 2em;
+				background-color: orange;
+				@include transition(background-color 0.25s ease);
+				&:hover {
+					background-color: $du_blue;
+				}
+			}
+		}
+		.head-image {
+			position: relative; z-index: 1;
+			img {max-width: 100%; height: auto; vertical-align: bottom;}
+		}
+		.head-title {font-size: 2rem; line-height: 2rem;}
+		.head-content {
+			padding-bottom: 80px;
+			.price {color: $du_blue; font-size: 4rem;}
+		}
+	}
+}
 
 /******* LOGIN PAGE *******/
 body.fixed {position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}
@@ -188,6 +275,16 @@ body.fixed {position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: 
   background-color: white;
   padding: 34px;
   .link {font-size: 12px;}
+}
+
+/**** FOOTER ****/
+footer.page-footer {
+	padding-top: 0;
+	margin-top: 0;
+	.footer-copyright {background-color: $du_black; height: 63px; line-height: 63px;}
+	.footer-nav {box-shadow: none !important; background: transparent;}
+	a {color: $du_light_grey;}
+
 }
 
 /**** RESPONSE ****/
