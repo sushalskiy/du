@@ -93,7 +93,7 @@ header {
 		padding: 1px;
 		margin: 0;
 		
-		.square {width: 100%; height: auto;}
+		.square {width: 100%; height: auto; vertical-align: bottom;}
 		.wrapper {
 			position: absolute; top: 0; left: 0;
 			text-align: center;	height: 100%; width: 100%; overflow: hidden;
