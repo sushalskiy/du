@@ -89,13 +89,21 @@ header {
 .section-title {font-size: 1.5rem;}
 .items-grid {
 	.item {
-		padding: 3px;
+		a {position: relative; display: block;}
+		padding: 1px;
 		margin: 0;
+		
+		.square {width: 100%; height: auto;}
 		.wrapper {
-			text-align: center;
-			height: 100%; width: 100%; overflow: hidden;
-			display: block;
+			position: absolute; top: 0; left: 0;
+			text-align: center;	height: 100%; width: 100%; overflow: hidden;
 			background: #ccc;
+			/* align to center */
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
 			@include transition(background 0.5s ease);
 			.content {padding: 17px;}
 
