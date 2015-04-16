@@ -56,6 +56,7 @@ $color_youtube  : #b6252c;
 		width: 54px;
 		height: 54px;
 		line-height: 54px;
+		text-align: center;
 		vertical-align: middle;
 		a {
 			color: $du_black;
@@ -225,7 +226,8 @@ header {
 			.share {
 				position: absolute; left: 0; bottom: 0; z-index: 0;
 				height: 80px; line-height: 80px; width: 100%;
-				border-top: 1px solid $du_light;
+				border: 1px solid $du_light;
+				li {width: 40px;}
 				a {
 					color: $du_light_grey;
 					&.facebook:hover {color: $color_facebook;}
@@ -243,6 +245,7 @@ header {
 				color: #fff; font-size: 2em;
 				background-color: orange;
 				@include transition(background-color 0.25s ease);
+				&.download {background-color: green;}
 				&:hover {
 					background-color: $du_blue;
 				}
@@ -258,6 +261,7 @@ header {
 			.price {color: $du_blue; font-size: 4rem;}
 		}
 	}
+	.chart-container img {max-width: 100%;}
 }
 
 /******* LOGIN PAGE *******/
@@ -288,12 +292,21 @@ footer.page-footer {
 }
 
 /**** RESPONSE ****/
-@media screen and (max-width: 768px){
+@media screen and (min-width: 600px){
+	.report {
+		.head-wrapper {
+			@include box-shadow(rgba(100, 100, 100, 0.5) 0 1px 3px 0);
+			.share {border-width: 1px 0 0 0;}
+		}
+	}
+}
+
+@media screen and (max-width: 992px){
 	.grid-5 {
 		.item {width: 25%; float: left;}
 	}
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 600px){
 	.grid-5 {
 		.item {width: 33.33%; float: left;}
 	}
