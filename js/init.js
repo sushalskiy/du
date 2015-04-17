@@ -10,6 +10,15 @@
     }
 
     //$('.materialboxed').materialbox();
+
+    $('.toogle-btn').click(function(){
+      var box = $(this).next();
+      if(box.hasClass('active')){
+        box.removeClass('active');
+      }else{
+        box.addClass('active');
+      }
+    })
     
     //on scroll
     $(window).scroll(function(){

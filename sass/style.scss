@@ -47,6 +47,7 @@ $color_youtube  : #b6252c;
 	background-color: transparent !important; 
 	@include box-shadow(none !important);
 }
+.toogle-box {display: none;}
 
 .sharing {
 	display: inline-block;
@@ -72,7 +73,7 @@ $color_youtube  : #b6252c;
 		a.youtube  {color: $color_youtube;}
 		&:hover{
 			a {
-				@include transform(scale(1.5));
+				@include transform(scale(1.25));
 			}
 		}
 	}
@@ -81,8 +82,14 @@ $color_youtube  : #b6252c;
 .share-section {
 	position: relative;
 	.header {display: inline-block; margin: 0; font-size: 36px; line-height: 64px; vertical-align: middle;}
+	.toogle-btn {margin: 0 20px 0 40px;}
+	.toogle-box {
+		display: inline-block; vertical-align: middle; overflow: hidden; width: 0px;
+		@include transition(width 0.25s ease);
+		&.active {width: 285px;}
+	}
 	.sharing {
-		margin: 0 0 0 34px;
+		width: 285px;
 		li {
 			a{
 				background: #fff;
