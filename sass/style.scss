@@ -226,6 +226,18 @@ header {
 .card {
 	.card-title {font-size: 17px; line-height: 1;}
 	.card-content {padding: 5px 15px 10px 15px;}
+	&.content-right {
+		position: relative;
+		.card-image {
+			img {vertical-align: bottom; width: 100%; height: auto;}
+		}
+		.card-content {
+			padding: 0;
+			padding-bottom: 75px;
+			.card-title {color: $du_black;}
+		}
+		.card-action { position: absolute;bottom: 0; left: 0; right: 0; padding: 20px 0;}
+	}
 }
 .page-header {
 	padding-top: 40px;
