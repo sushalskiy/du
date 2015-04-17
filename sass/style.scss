@@ -157,6 +157,9 @@ header {
 			}
 		}
 	}
+	&.items-col {
+		.item {padding: 0 0.75rem;}
+	}
 }
 .grid-5 {
 	.item {
@@ -193,10 +196,8 @@ header {
 	}
 }
 .card {
-	.card-title {font-size: 18px; line-height: 1;}
-	&.no-content {
-		.card-action {border-top: none; padding-top: 10px; padding-bottom: 10px;}
-	}
+	.card-title {font-size: 17px; line-height: 1;}
+	.card-content {padding: 5px 15px 10px 15px;}
 }
 .page-header {
 	padding-top: 40px;
@@ -306,9 +307,14 @@ footer.page-footer {
 		.item {width: 25%; float: left;}
 	}
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 767px){
 	.grid-5 {
 		.item {width: 33.33%; float: left;}
+	}
+}
+@media screen and (max-width: 600px){
+	.grid-5 {
+		.item {width: 50%; float: left;}
 	}
 }
 @media screen and (max-width: 480px){
@@ -317,4 +323,9 @@ footer.page-footer {
 	}
 	.brand-logo {right: 50%;}
 	.brand-logo img, .footer-logo img {max-width: 150px;}
+}
+@media screen and (max-width: 400px){
+	.grid-5 {
+		.item {width: 100%; float: none;}
+	}
 }
