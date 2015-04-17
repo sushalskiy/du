@@ -3693,6 +3693,16 @@ header nav.transparent {
   transition: opacity 0.25s ease;
 }
 /* line 203, ../sass/style.scss */
+.cta-container .center {
+  padding: 40px 0;
+}
+/* line 205, ../sass/style.scss */
+.cta-container .center h1, .cta-container .center h2, .cta-container .center h3, .cta-container .center h4, .cta-container .center h5 {
+  display: inline-block;
+  margin: 0 80px 0 0;
+  vertical-align: middle;
+}
+/* line 207, ../sass/style.scss */
 .cta-container .hover-content {
   position: absolute;
   top: 100%;
@@ -3707,54 +3717,54 @@ header nav.transparent {
   -webkit-transition: top 0.25s ease;
   transition: top 0.25s ease;
 }
-/* line 211, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 .cta-container:hover .hover-content {
   top: 0;
 }
-/* line 212, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .cta-container:hover .wrapper {
   opacity: 0;
 }
 
-/* line 216, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .section .heading {
   padding: 30px 0;
 }
-/* line 218, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 .section .heading .header {
   margin: 0;
   line-height: 36px;
 }
 
-/* line 222, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .card .card-title {
   font-size: 17px;
   line-height: 1;
 }
-/* line 223, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 .card .card-content {
   padding: 5px 15px 10px 15px;
 }
 
-/* line 225, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .page-header {
   padding-top: 40px;
 }
-/* line 227, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 .page-header .page-title {
   font-size: 2em;
   margin: 0;
   padding: 0;
   line-height: 40px;
 }
-/* line 228, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .page-header .action {
   float: right;
   text-align: right;
   line-height: 40px;
 }
 
-/* line 233, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .card-image img {
   opacity: 1;
   -moz-transition: opacity 0.25s ease;
@@ -3762,30 +3772,30 @@ header nav.transparent {
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
 }
-/* line 234, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .card-image img:hover {
   opacity: 0.8;
 }
 
-/* line 238, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .pagination li, .pagination li i {
   line-height: 30px;
 }
-/* line 239, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .pagination li.active {
   background-color: #ffe04a;
 }
 
 /*** REPORT PAGE ***/
-/* line 245, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 .report {
   padding: 30px 0;
 }
-/* line 248, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .report .head .head-wrapper {
   position: relative;
 }
-/* line 250, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .report .head .head-wrapper .share {
   position: absolute;
   left: 0;
@@ -3796,35 +3806,35 @@ header nav.transparent {
   width: 100%;
   border: 1px solid #e4e4e4;
 }
-/* line 254, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .report .head .head-wrapper .share li {
   width: 40px;
 }
-/* line 255, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 .report .head .head-wrapper .share a {
   color: #909090;
 }
-/* line 257, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 .report .head .head-wrapper .share a.facebook:hover {
   color: #004b99;
 }
-/* line 258, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .report .head .head-wrapper .share a.vk:hover {
   color: #0069b3;
 }
-/* line 259, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 .report .head .head-wrapper .share a.google:hover {
   color: #df4104;
 }
-/* line 260, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 .report .head .head-wrapper .share a.twitter:hover {
   color: #60a9de;
 }
-/* line 261, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .report .head .head-wrapper .share a.youtube:hover {
   color: #b6252c;
 }
-/* line 264, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 .report .head .head-wrapper .cart {
   display: block;
   position: absolute;
@@ -3844,46 +3854,46 @@ header nav.transparent {
   -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
-/* line 272, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .report .head .head-wrapper .cart.download {
   background-color: green;
 }
-/* line 273, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .report .head .head-wrapper .cart:hover {
   background-color: #43d1ff;
 }
-/* line 278, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .report .head .head-image {
   position: relative;
   z-index: 1;
 }
-/* line 280, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .report .head .head-image img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
-/* line 282, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .report .head .head-title {
   font-size: 2rem;
   line-height: 2rem;
 }
-/* line 283, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .report .head .head-content {
   padding-bottom: 80px;
 }
-/* line 285, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .report .head .head-content .price {
   color: #43d1ff;
   font-size: 4rem;
 }
-/* line 288, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .report .chart-container img {
   max-width: 100%;
 }
 
 /******* LOGIN PAGE *******/
-/* line 292, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 body.fixed {
   position: absolute;
   top: 0;
@@ -3893,7 +3903,7 @@ body.fixed {
   overflow: hidden;
 }
 
-/* line 293, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 #login-banner {
   position: fixed;
   z-index: 0;
@@ -3908,104 +3918,104 @@ body.fixed {
   background-size: cover;
 }
 
-/* line 300, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .login-section {
   position: relative;
   z-index: 1;
   margin-top: 50px;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .logo-text {
   font-size: 1.5em;
   padding: 1em 0;
 }
 
-/* line 302, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 .login-wrapper {
   background-color: white;
   padding: 34px;
 }
-/* line 305, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .login-wrapper .link {
   font-size: 12px;
 }
 
 /**** FOOTER ****/
-/* line 309, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 footer.page-footer {
   padding-top: 0;
   margin-top: 0;
 }
-/* line 312, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 footer.page-footer .footer-copyright {
   background-color: #332d2a;
   height: 63px;
   line-height: 63px;
 }
-/* line 313, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 footer.page-footer .footer-nav {
   box-shadow: none !important;
   background: transparent;
 }
-/* line 314, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 footer.page-footer a {
   color: #909090;
 }
 
 /**** RESPONSE ****/
 @media screen and (min-width: 600px) {
-  /* line 321, ../sass/style.scss */
+  /* line 325, ../sass/style.scss */
   .report .head-wrapper {
     -moz-box-shadow: rgba(100, 100, 100, 0.5) 0 1px 3px 0;
     -webkit-box-shadow: rgba(100, 100, 100, 0.5) 0 1px 3px 0;
     box-shadow: rgba(100, 100, 100, 0.5) 0 1px 3px 0;
   }
-  /* line 323, ../sass/style.scss */
+  /* line 327, ../sass/style.scss */
   .report .head-wrapper .share {
     border-width: 1px 0 0 0;
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 330, ../sass/style.scss */
+  /* line 334, ../sass/style.scss */
   .grid-5 .item {
     width: 25%;
     float: left;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 335, ../sass/style.scss */
+  /* line 339, ../sass/style.scss */
   .grid-5 .item {
     width: 33.33%;
     float: left;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 340, ../sass/style.scss */
+  /* line 344, ../sass/style.scss */
   .grid-5 .item {
     width: 50%;
     float: left;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 345, ../sass/style.scss */
+  /* line 349, ../sass/style.scss */
   .grid-5 .item {
     width: 50%;
     float: left;
   }
 
-  /* line 347, ../sass/style.scss */
+  /* line 351, ../sass/style.scss */
   .brand-logo {
     right: 50%;
   }
 
-  /* line 348, ../sass/style.scss */
+  /* line 352, ../sass/style.scss */
   .brand-logo img, .footer-logo img {
     max-width: 150px;
   }
 }
 @media screen and (max-width: 400px) {
-  /* line 352, ../sass/style.scss */
+  /* line 356, ../sass/style.scss */
   .grid-5 .item {
     width: 100%;
     float: none;
