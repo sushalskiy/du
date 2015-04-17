@@ -39,6 +39,34 @@ $color_youtube  : #b6252c;
 .light-grey-bg {background-color: $du_light !important;}
 .text-shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
+.graph-key {
+	line-height: 32px;
+	font-size: 0.75rem;
+	height: 32px;
+}
+.btn-circle {
+	display: inline-block;
+	position: absolute; 
+	width: 80px; height: 80px; line-height: 80px; text-align: center;
+	color: #fff; font-size: 2em;
+}
+
+.icon-item {
+	margin-bottom: 20px;
+	.icon {
+		display: inline-block;
+		background-color: $du_blue;
+		color: #fff;
+		width: 40px; height: 40px; line-height: 40px; text-align: center;
+		border-radius: 50%;
+	}
+	.title {
+		display: inline-block; vertical-align: top;
+		line-height: 40px; padding-left: 1rem;
+		font-size: 1.25rem;
+	}
+}
+
 .link {display: inline-block; height: 36px; line-height: 36px; padding: 0 2rem; text-align: center; text-transform: uppercase;}
 
 .bottom-shadow {@include box-shadow(rgba(128, 128, 128, 0.5) 0 5px 10px 0px);}
@@ -107,7 +135,7 @@ $color_youtube  : #b6252c;
 	
 }
 
-.fixed {position: fixed; top: 0; left: 0; right: 0; z-index: 9000;}
+.fixed {position: fixed; top: 0; left: 0; right: 0; z-index: 9000; -webkit-transform: translateZ(0);}
 .drop {display: none;}
 .drop-button {
 	cursor: pointer;
@@ -257,7 +285,7 @@ header {
 }
 
 
-
+.chart-container img {max-width: 100%;}
 /*** REPORT PAGE ***/
 .report {
 	padding: 30px 0;
@@ -278,18 +306,10 @@ header {
 					&.youtube:hover  {color: $color_youtube;}
 				}
 			}
-			.cart {
-				display: block;
-				position: absolute; right: 40px; bottom: 40px; z-index: 2;
-				border-radius: 50%;
-				width: 80px; height: 80px; line-height: 80px; text-align: center;
-				color: #fff; font-size: 2em;
+			.btn-circle {
+				right: 40px; bottom: 40px; z-index: 2;border-radius: 50%;
 				background-color: orange;
-				@include transition(background-color 0.25s ease);
 				&.download {background-color: green;}
-				&:hover {
-					background-color: $du_blue;
-				}
 			}
 		}
 		.head-image {
@@ -302,8 +322,29 @@ header {
 			.price {color: $du_blue; font-size: 4rem;}
 		}
 	}
-	.chart-container img {max-width: 100%;}
 }
+/*** INVEST PROJECT PAGE ***/
+.invest-project {
+	.head {
+		.parallax-container {
+			height: 250px;
+			position: relative;
+			.title-wrapper {position: absolute; left: 0; right: 0; bottom: 0;}
+			.head-title {color: #fff; font-size: 2rem;}
+		}
+		.head-intro {
+			border-bottom: 1px solid $du_light;
+			margin-bottom: 20px;
+			position: relative;
+			.btn-circle {
+				display: block;
+				position: absolute; right: 40px; bottom: -40px; z-index: 2;
+				background-color: orange;
+			}
+		}
+	}
+}
+
 
 /******* LOGIN PAGE *******/
 body.fixed {position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}

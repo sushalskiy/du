@@ -6,7 +6,7 @@
 
     //header gap
     if($('#navigation').length > 0){
-    	$('main').css('margin-top',$('#navigation').height());
+    	headerGap();
     }
 
     //$('.materialboxed').materialbox();
@@ -21,13 +21,9 @@
     })
     
     //on scroll
-    $(window).scroll(function(){
-    	if($(window).scrollTop() > 150){
-    		$('#navigation-home').removeClass('transparent');
-    	}else{
-    		$('#navigation-home').addClass('transparent');
-    	}
-    });
+    window.onscroll = function(){
+      fixHeader();
+    };
 
     //on windo resize
     $(window).resize(function(){
@@ -53,9 +49,24 @@
 
   var headerGap = function(){
   	if($('#navigation').length > 0){
-    	$('main').css('margin-top',$('#navigation').height());
+    	$('main').css('margin-top',$('#navigation').outerHeight());
     }
-  }
+  };
+
+  var header_fixed = 0;
+  var header_fixed_pre = 0;
+  var fixHeader = function(){
+      header_fixed = window.pageYOffset > 400 ? 1 : 0;
+      if(header_fixed_pre !== header_fixed){
+          //параметр изменился
+          if(header_fixed){
+            $('#navigation-home').removeClass('transparent');
+          }else{
+            $('#navigation-home').addClass('transparent');
+          }
+      }
+      header_fixed_pre = header_fixed;
+  };
 
 
 })(jQuery); // end of jQuery name space
