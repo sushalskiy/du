@@ -189,12 +189,28 @@ header {
 	.item:nth-child(10) .wrapper {background: #fff54e;}
 }
 
-.cta-container { 
+.cta-container {
 	background-image: url('../images/background1.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	.wrapper {padding: 30px 0; overflow: hidden; height: 100%; background-color: rgba(71, 209, 255, 0.55)}
+	overflow: hidden; position: relative;
+	min-height: 200px;
+	.wrapper {
+		padding: 30px 0; overflow: hidden; height: 100%; opacity: 1;
+		@include transition(opacity 0.25s ease);
+	}
+	.hover-content {
+		position: absolute; top: 100%; left: 0; right: 0; height: 100%;
+		padding: 30px 0;
+		background-color: rgba(71, 209, 255, 0.55);
+		box-sizing: border-box;
+		@include transition(top 0.25s ease);
+	}
+	&:hover {
+		.hover-content {top: 0;}
+		.wrapper {opacity: 0;}
+	}
 }
 .section {
 	.heading {
